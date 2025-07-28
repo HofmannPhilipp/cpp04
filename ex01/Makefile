@@ -1,0 +1,30 @@
+NAME = main
+CXX = c++
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./includes -I./wrong
+
+VPATH = classes wrong
+
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+OBJS_DIR = objects
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+
+$(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
+	@echo "Compiling $<"
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(OBJS_DIR):
+	@echo "Creating $(OBJS_DIR) directory"
+	@mkdir -p $(OBJS_DIR)
+
+clean:
+	rm -rf $(OBJS_DIR)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
