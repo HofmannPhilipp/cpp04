@@ -1,8 +1,10 @@
 NAME = main
 CXX = c++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Werror
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./includes -I./wrong
 
-SRCS = main.cpp Animal.cpp
+VPATH = classes wrong
+
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS_DIR = objects
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
