@@ -6,7 +6,7 @@
 class Cat : public Animal
 {
 private:
-    Brain *brain = new Brain();
+    Brain *brain;
 
 public:
     Cat();
