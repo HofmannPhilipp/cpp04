@@ -6,11 +6,12 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:44:12 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 11:00:56 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:00:47 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+#include <iostream>
 
 Cure::Cure() : AMateria("cure")
 {

@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 10:25:03 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 12:53:51 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:06:29 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ AMateria ::AMateria(const AMateria &other) : type(other.type)
 
 AMateria &AMateria::operator=(const AMateria &other)
 {
+	(void)other;
 	return *this;
 }
 
@@ -45,4 +46,6 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
+	std::cout << "* uses " << this->type
+			  << " on " << target.getName() << " *" << std::endl;
 }

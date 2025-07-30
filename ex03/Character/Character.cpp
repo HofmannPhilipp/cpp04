@@ -6,11 +6,12 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:43:44 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 17:29:15 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:10:51 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include <iostream>
 
 Character::Character() : name("Default")
 {
@@ -54,6 +55,11 @@ const Character &Character::operator=(const Character &other)
 		}
 	}
 	return *this;
+}
+
+std::string const &Character::getName() const
+{
+	return name;
 }
 
 void Character::equip(AMateria *m)

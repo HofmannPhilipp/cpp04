@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:43:56 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 10:45:01 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:00:24 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 class Cure : public AMateria
 {
+public:
 	Cure();
 	~Cure();
 	Cure(const Cure &other);

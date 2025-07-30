@@ -6,11 +6,12 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:03:06 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 17:48:47 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 18:09:12 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+#include <iostream>
 
 MateriaSource::MateriaSource()
 {
