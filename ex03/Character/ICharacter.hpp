@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:05:01 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/29 14:20:03 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 16:43:01 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "AMateria.hpp"
 #include <string>
 #include <iostream>
+
+#define INVENTORY_SIZE 4
 
 class ICharacter
 {

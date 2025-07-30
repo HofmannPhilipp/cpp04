@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:43:34 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/29 15:50:57 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 17:11:19 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ class Character : public ICharacter
 {
 private:
 	std::string name;
-	AMateria *materias[4];
+	AMateria *inventory[INVENTORY_SIZE];
 
 public:
 	Character();
+	Character(std::string name);
 	~Character();
 	Character(const Character &other);
 	const Character &operator=(const Character &other);
