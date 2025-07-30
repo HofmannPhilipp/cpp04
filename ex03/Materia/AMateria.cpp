@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 10:25:03 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/29 14:51:29 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/30 12:53:51 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ AMateria ::AMateria(const AMateria &other) : type(other.type)
 
 AMateria &AMateria::operator=(const AMateria &other)
 {
-	if (this != &other)
-		this->type = other.type;
 	return *this;
 }
 

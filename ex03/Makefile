@@ -1,10 +1,10 @@
 NAME = main
 CXX = c++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./includes
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./Character -I./Materia -I./MateriaSource
 
-VPATH = classes
+VPATH = Character Materia MateriaSource
 
-SRCS = main.cpp
+SRCS = main.cpp Ice.cpp Cure.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 OBJS_DIR = objects
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
