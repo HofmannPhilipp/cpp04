@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:43:44 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/31 10:37:57 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:53:37 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ Character ::Character(const Character &other) : Character(other.name)
 	if (debug_flag)
 		std::cout << "Character Copy Constructor called." << std::endl;
 	for (int i = 0; i < INVENTORY_SIZE; i++)
-		inventory[i] = other.inventory[i];
+		if (other.inventory[i])
+			inventory[i] = other.inventory[i]->clone();
+		else
+			inventory[i] = NULL;
 }
 
 const Character &Character::operator=(const Character &other)
