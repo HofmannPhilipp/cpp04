@@ -6,22 +6,25 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:03:06 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 18:09:12 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:37:04 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+#include "debug.hpp"
 #include <iostream>
 
 MateriaSource::MateriaSource()
 {
-	std::cout << "MateriaSource Default Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "MateriaSource Default Constructor called." << std::endl;
 	for (int i = 0; i < SLOT_SIZE; i++)
 		slots[i] = NULL;
 }
 MateriaSource::~MateriaSource()
 {
-	std::cout << "MateriaSource Deconstructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "MateriaSource Deconstructor called." << std::endl;
 	for (int i = 0; i < SLOT_SIZE; i++)
 	{
 		if (slots[i])
@@ -31,7 +34,8 @@ MateriaSource::~MateriaSource()
 
 MateriaSource ::MateriaSource(const MateriaSource &other)
 {
-	std::cout << "MateriaSource Copy Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "MateriaSource Copy Constructor called." << std::endl;
 	for (int i = 0; i < SLOT_SIZE; i++)
 		slots[i] = other.slots[i];
 }

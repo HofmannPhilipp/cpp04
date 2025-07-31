@@ -1,6 +1,6 @@
 NAME = main
 CXX = c++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./Character -I./Materia -I./MateriaSource
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -I./inc -I./Character -I./Materia -I./MateriaSource
 
 VPATH = Character Materia MateriaSource
 

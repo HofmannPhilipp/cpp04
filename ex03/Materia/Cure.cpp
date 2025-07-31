@@ -6,26 +6,30 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:44:12 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 18:00:47 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:05:11 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 #include <iostream>
+#include "debug.hpp"
 
 Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure Default Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Cure Default Constructor called." << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Cure destructor called." << std::endl;
 }
 
 Cure ::Cure(const Cure &other) : AMateria(other)
 {
-	std::cout << "Cure Copy Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Cure Copy Constructor called." << std::endl;
 }
 
 const Cure &Cure::operator=(const Cure &other)

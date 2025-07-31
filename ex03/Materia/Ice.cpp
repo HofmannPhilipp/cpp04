@@ -6,27 +6,31 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:53:13 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 11:01:25 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:04:16 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 #include <string>
 #include <iostream>
+#include "debug.hpp"
 
 Ice::Ice() : AMateria("ice")
 {
-	std::cout << "Ice Default Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Ice Default Constructor called." << std::endl;
 }
 
 Ice::~Ice()
 {
-	std::cout << "Ice destructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Ice destructor called." << std::endl;
 }
 
 Ice ::Ice(const Ice &other) : AMateria(other)
 {
-	std::cout << "Ice Copy Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Ice Copy Constructor called." << std::endl;
 }
 
 const Ice &Ice::operator=(const Ice &other)

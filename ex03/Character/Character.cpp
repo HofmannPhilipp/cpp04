@@ -6,29 +6,33 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 15:43:44 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/30 18:10:51 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/31 10:37:57 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "debug.hpp"
 #include <iostream>
 
 Character::Character() : name("Default")
 {
-	std::cout << "Character Default Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Character Default Constructor called." << std::endl;
 	for (int i = 0; i < INVENTORY_SIZE; i++)
 		inventory[i] = NULL;
 }
 Character::Character(std::string name) : name(name)
 {
-	std::cout << "Character Default Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Character Default Constructor called." << std::endl;
 	for (int i = 0; i < INVENTORY_SIZE; i++)
 		inventory[i] = NULL;
 }
 
 Character::~Character()
 {
-	std::cout << "Character destructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Character destructor called." << std::endl;
 	for (int i = 0; i < INVENTORY_SIZE; i++)
 	{
 		if (inventory[i])
@@ -38,7 +42,8 @@ Character::~Character()
 
 Character ::Character(const Character &other) : Character(other.name)
 {
-	std::cout << "Character Copy Constructor called." << std::endl;
+	if (debug_flag)
+		std::cout << "Character Copy Constructor called." << std::endl;
 	for (int i = 0; i < INVENTORY_SIZE; i++)
 		inventory[i] = other.inventory[i];
 }
